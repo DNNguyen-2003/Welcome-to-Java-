@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class PhuongTrinhBacNhat {
     public static void main (String[] args){
-        Double a, b;
+        double a, b;
         double nghiem;
         try{
         Scanner scanner = new Scanner(System.in);
