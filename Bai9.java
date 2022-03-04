@@ -11,19 +11,21 @@ import java.util.Scanner;
  *
  * @author Lab
  */
-public class Bai3 {
-    public static void main(String[] args){
+public class Bai9 {
+    public static void main(String[] args) {
    try{ Scanner sc = new Scanner(System.in);
         System.out.print("Nhập N: ");
-        int n = sc.nextInt();
-        int sum=0;
-        for (int i=0;i<=n;i++)
+        int n= sc.nextInt();
+        int m;
+        while (n!=0)
         {
-            sum+=i;
+            m=n%10;
+            n=n/10;
+            System.out.print(m);
         }
-        System.out.println("Tổng = "+sum);
-    }catch (Exception e){
-            System.out.println("Không hợp lệ !!!");
-    }
+   }catch(Exception e)
+   {
+       System.out.print("Không hợp lệ !!!");
+   }
 }
 }

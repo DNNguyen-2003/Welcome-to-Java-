@@ -13,36 +13,18 @@ import java.util.Scanner;
  */
 public class Bai4 {
     public static void main(String[] args){
-        try{ int n;
+        try{ int n,m;
+        int sum=0;
         Scanner sc = new Scanner(System.in);
-        do {
             System.out.print("Nhập N: ");
-            n = sc.nextInt();
-        }while(n>7||n<1);
-        switch(n);
+        n = sc.nextInt();
+        while (n!=0)
         {
-            case 1:
-                System.out.println("Thứ hai");
-                break;
-            case 2:
-                System.out.println("Thứ ba");
-                break;
-            case 3:
-                System.out.println("Thứ tư");
-                break;
-            case 4:
-                System.out.println("Thứ năm");
-                break;
-            case 5:
-                System.out.println("Thứ sáu");
-                break;
-            case 6:
-                System.out.println("Thứ bảy");
-                break;
-            case 7: 
-                System.out.println("Chủ nhật");
-                break;
-        } 
+            m=n%10;
+            sum+=m;
+            n=n/10;
+        }
+            System.out.println("Tổng các chữ số là: "+sum);
    }catch (Exception e)
    {
        System.out.println("Không hợp lệ !!!");

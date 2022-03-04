@@ -5,33 +5,15 @@
  */
 package javacode;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Lab
  */
 public class Bai5 {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập số thứ nhất: ");
-        double x = sc.nextDouble();
-        System.out.print("Nhập số thứ hai: ");
-        double y = sc.nextDouble();
-
-        x = Math.round(x * 1000);
-        x = x / 1000;
-
-        y = Math.round(y * 1000);
-        y = y / 1000;
-
-        if (x == y)
+        for(int i=-10;i!=0;i++)
         {
-            System.out.println("Giống nhau đến ba chữ số thập phân");
-        }
-        else
-        {
-            System.out.println("Số khác nhau");
+            System.out.print(i+" ");
         }
     }
     }

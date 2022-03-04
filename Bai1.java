@@ -5,7 +5,6 @@
  */
 package javacode;
 
-import java.util.Scanner;
 
 /**
  *
@@ -13,23 +12,11 @@ import java.util.Scanner;
  */
 public class Bai1 {
     public static void main(String[] args){
-        try{ double n;
-        System.out.print("Nhập N: ");
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextDouble();
-        if (n>0)
-        {
-            System.out.println("Số dương");
-        }else if (n<0) 
-        {
-            System.out.println("Số âm");
-        }else 
-        {
-            System.out.println("Số không");
-        }
-   }catch (Exception e){
-       System.out.println("Không hợp lệ !!!");
-   }
+    int n=0;
+    while(n<=10)
+    {
+        System.out.print(n+" ");
+        n++;
     }
-            
+    }    
 }
