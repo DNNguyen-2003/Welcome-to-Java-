@@ -1,27 +1,58 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package baitap;
+package javacode;
 
 import java.util.Scanner;
 
 /**
  *
- * @author 84705
+ * @author Lab
  */
 public class Bai3 {
-    public static void main (String[] args){
-        double a,b;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Nhập a: ");
-        a = input.nextDouble();
-        System.out.print("Nhập b: ");
-        b = input.nextDouble();
-        System.out.println("Tổng a+b là: "+(a+b));
-        System.out.println("Hiệu a-b là: "+(a-b));
-        System.out.println("Tích a*b là: "+(a*b));
-        System.out.println("Thương a/b là: "+(a/b));
-        System.out.println("Số mũ a^b là: "+(Math.pow(a,b)));
+    public static void main(String[] args){
+   try{ Scanner in = new Scanner(System.in);
+        System.out.print("Nhập N: ");
+        double n = in.nextDouble();
+
+        if (n > 0)
+        {
+            if (n < 1)
+            {
+                System.out.println("Số dương rất nhỏ");
+            }
+            else if (n > 1000000)
+            {
+                System.out.println("Số dương rất lớn");
+            }
+            else
+            {
+                System.out.println("Số dương");
+            }
+        }
+        else if (n < 0)
+        {
+            if (Math.abs(n) < 1)
+            {
+                System.out.println("Số âm rất nhỏ");
+            }
+            else if (Math.abs(n) > 1000000)
+            {
+                System.out.println("Số âm rất lớn");
+            }
+            else
+            {
+                System.out.println("Số âm");
+            }
+        }
+        else
+        {
+            System.out.println("Số không");
+        }
+    }catch (Exception e){
+            System.out.println("Không hợp lệ !!!");
+    }
 }
 }

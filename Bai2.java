@@ -1,29 +1,40 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package baitap;
+package javacode;
 
 import java.util.Scanner;
 
 /**
  *
- * @author 84705
+ * @author Lab
  */
 public class Bai2 {
     public static void main (String[] args){
-        int a,b;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Nhập a: ");
-        a = input.nextInt();
-        System.out.print("Nhập b: ");
-        b = input.nextInt();
-        System.out.println("Tổng a+b là: "+(a+b));
-        System.out.println("Hiệu a-b là: "+(a-b));
-        System.out.println("Tích a*b là: "+(a*b));
-        System.out.println("Thương a/b là: "+(a/b));
-        System.out.println("Phần dư a%b là: "+(a%b));
-        System.out.println("Số mũ a^b là: "+(Math.pow(a,b)));
+        try{ double a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhập A: ");
+        a = sc.nextDouble();
+        System.out.print("Nhập B: ");
+        b = sc.nextDouble();
+        System.out.print("Nhập C:");
+        c = sc.nextDouble();
+        if (a>b&&a>c)
+        {
+            System.out.print("Số lớn nhất là: "+a);
+        }else if (b>a&&b>c)
+        {
+            System.out.print("Số lớn nhất là: "+b);
+        }else 
+        {
+            System.out.print("Số lớn nhất là: "+c);
+        }
+   }catch (Exception e)
+   {
+      System.out.println("Không hợp lệ !!!");
+   }
+
     }
 }
-   
