@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package KetThucHocPhanJava;
+package JavaSwing;
+
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,64 +13,57 @@ import java.util.Date;
  * @author 84705
  */
 public class Student extends Person implements Comparable<Student>,Serializable{
-	protected String studentID;
-	protected String major;
-	protected Date enrolledDate;
-	
-	public Student(String name, Date birthday, byte gender, String studentID, String major, Date enrolledDate) {
-		super(name, birthday, gender);
-		this.studentID = studentID;
-		this.major = major;
-		this.enrolledDate = enrolledDate;
-	}
+    private String StudentID;
+    private String major;
+    private Date enrolledDate;
+    
 
-	public String getStudentID() {
-		return studentID;
-	}
+    public Student() {
+    }
 
-	public void setStudentID(String studentID) {
-		this.studentID = studentID;
-	}
+    public Student(String StudentID, String major, Date enrolledDate, String name, Date birthday, byte gender) {
+        super(name, birthday, gender);
+        this.StudentID = StudentID;
+        this.major = major;
+        this.enrolledDate = enrolledDate;
+    }
 
-	public String getMajor() {
-		return major;
-	}
+    Student(String Name, String Birthday, String Gender, String StudentID, String Major, String EnrolledDate) {
+    }    
+    public String getStudentID() {
+        return StudentID;
+    }
 
-	public void setMajor(String major) {
-		this.major = major;
-	}
+    public void setStudentID(String StudentID) {
+        this.StudentID = StudentID;
+    }
 
-	public Date getEnrolledDate() {
-		return enrolledDate;
-	}
+    public String getMajor() {
+        return major;
+    }
 
-	public void setEnrolledDate(Date enrolledDate) {
-		this.enrolledDate = enrolledDate;
-	}
-	
-	public String getten() {
-		String s = this.name.trim();
-		if(s.indexOf(" ")>=0) {
-			int vt = s.lastIndexOf(" ");
-			return s.substring(vt+1);
-		}else {
-			return s;
-		}
-	}
+    public void setMajor(String major) {
+        this.major = major;
+    }
 
-	@Override
-	public String toString() {
-		return "Student [studentID=" + studentID + ", major=" + major + ", enrolledDate=" + enrolledDate + ", name="
-				+ name + ", birthday=" + birthday + ", gender=" + gender + "]";
-	}
+    public Date getEnrolledDate() {
+        return enrolledDate;
+    }
 
-	@Override
-	public int compareTo(Student o) {
-		String nameThis=this.getten();
+    public void setEnrolledDate(Date enrolledDate) {
+        this.enrolledDate = enrolledDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "StudentID=" + StudentID + ", major=" + major + ", enrolledDate=" + enrolledDate + '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+            String nameThis=this.getten();
 		String nameO=o.getten();
-		
 		return nameThis.compareTo(nameO);
-	}
-	
-	
+    }
+    
 }
